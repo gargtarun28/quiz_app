@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "dd97cf76-6550-481e-8076-1ad34be8abf4",
+		"name": "quiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:2000/quiz/save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"quiz 2\",\r\n    \"created_by\":2,\r\n    \"status\":\"Published\",\r\n    \"questions\": [{\r\n            \"no\" : 1,  \r\n            \"question\": \"what is 2+3?\",\r\n            \"options\": [\r\n                \"1\",\r\n                \"2\",\r\n                \"5\",\r\n                \"6\"\r\n            ],\r\n            \"answer\": \"5\"\r\n        },\r\n        {\r\n            \"no\" : 2,  \r\n            \"question\": \"The famous Dilwara Temples are situated in\",\r\n            \"options\": [\r\n                \"Uttar Pradesh\",\r\n                \"Rajasthan\",\r\n                \"Maharashtra\",\r\n                \"Madhya Pradesh\"\r\n            ],\r\n            \"answer\": \"Rajasthan\"\r\n        }\r\n        ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/quiz/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"quiz",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2000/quiz/find",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"635e12f01e37529a5bdc0c67\",\r\n    \"status\":\"Published\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/quiz/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"quiz",
+						"find"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2000/score/save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"quiz_id\": \"635e13971e37529a5bdc0c69\",\r\n    \"score\": [\r\n        {   \r\n            \"question\": 1,\r\n            \"answer\": \"1747\",\r\n            \"is_correct\":1\r\n        },\r\n        {\r\n            \"question\": 2,\r\n            \"answer\": \"New Delhi\",\r\n            \"is_correct\":0\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/score/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"score",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2000/quiz/update-status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"635e12f01e37529a5bdc0c67\",\r\n    \"status\":\"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/quiz/update-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"quiz",
+						"update-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2000/score/result",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"quiz_id\":\"635e12f01e37529a5bdc0c67\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/score/result",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"score",
+						"result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2000/quiz/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"635e318a379862935382ce7c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/quiz/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"quiz",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
